@@ -25,7 +25,9 @@
               "apps/front-sample/src/favicon.ico",
               "apps/front-sample/src/assets"
             ],
-            "styles": ["apps/front-sample/src/styles.scss"],
+            "styles": [
+              "apps/front-sample/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -79,7 +81,10 @@
               "apps/front-sample/tsconfig.app.json",
               "apps/front-sample/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/front-sample/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/front-sample/**"
+            ]
           }
         },
         "test": {
@@ -89,6 +94,10 @@
             "tsConfig": "apps/front-sample/tsconfig.spec.json",
             "setupFile": "apps/front-sample/src/test-setup.ts"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     },
@@ -113,8 +122,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/front-sample-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/front-sample-e2e/**"]
+            "tsConfig": [
+              "apps/front-sample-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/front-sample-e2e/**"
+            ]
           }
         }
       }
